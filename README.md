@@ -1,70 +1,53 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Pokedex
 
-## Available Scripts
+1.) A React-Redux project using class components.
 
-In the project directory, you can run:
+2.) In this project we will get Pokémons from an API and show it to the user, the user can select a Pokemon in order to see the details for that Pokemon.
 
-### `yarn start`
+3.) Pokemon can be added to his favourites in order to collect a list of Pokémons. We store this favourite list in redux persist, so that the user can come back to the website and the data is kept and persisted.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+## API Reference
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Get all items
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```http
+  GET https://pokeapi.co/api/v2/pokemon
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Get item
 
-### `yarn eject`
+```http
+  GET https://pokeapi.co/api/v2/pokemon/id
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `number` | **Required**. Id of item to fetch |
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Tech Stack
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+**Client:** React, Redux, Material UI
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Features
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Added a favourite button which turns red as soon as you click on it and the clicked pokemon gets added to favourite tab.
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+## Screenshots
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![pok1](https://user-images.githubusercontent.com/97042529/217512641-d805793f-ba33-44b2-b35a-8ab2c4654997.png)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+![poke2](https://user-images.githubusercontent.com/97042529/217513655-037be0f7-3106-4ef4-b847-0f4dbef3d746.png)
 
-### Advanced Configuration
+![poke3](https://user-images.githubusercontent.com/97042529/217514113-2366f23e-ef3b-4b2c-9e4b-f6beee22ad16.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![poke4](https://user-images.githubusercontent.com/97042529/217514289-03bd3c27-ac96-4dc9-97e0-b7d1aed2c6fb.png)
